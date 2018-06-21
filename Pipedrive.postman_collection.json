@@ -1,0 +1,68 @@
+{
+	"info": {
+		"_postman_id": "672f97b2-cc19-45a5-b6d9-fa53ccb85756",
+		"name": "Pipedrive",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get Organization & Relations",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/v1/organizations/Black Banana",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"organizations",
+						"Black Banana"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Post Organizations & Relations",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"org_name\": \"Paradise Island\",\n\t\"daughters\": [{\n\t\t\"org_name\": \"Banana tree\",\n\t\t\"daughters\": [{\n\t\t\t\"org_name\": \"Yellow Banana\"\n\t\t}, {\n\t\t\t\"org_name\": \"Brown Banana\"\n\t\t}, {\n\t\t\t\"org_name\": \"Black Banana\"\n\t\t}]\n\t}, {\n\t\t\"org_name\": \"Big banana tree\",\n\t\t\"daughters\": [{\n\t\t\t\"org_name\": \"Yellow Banana\"\n\t\t}, {\n\t\t\t\"org_name\": \"Brown Banana\"\n\t\t}, {\n\t\t\t\"org_name\": \"Green Banana\"\n\t\t}, {\n\t\t\t\"org_name\": \"Black Banana\",\n\t\t\t\"daughters\": [{\n\t\t\t\t\"org_name\": \"Phoneutria Spider\"\n\t\t\t}]\n\t\t}]\n\t}]\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/api/v1/organizations",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"api",
+						"v1",
+						"organizations"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
